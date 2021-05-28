@@ -1,4 +1,6 @@
-- The current code is for the house price prediction of merb dataset --- from Kaggle.
+- This code can be used as a test for model selection. Supported models include RandomForestRegressor, AdaBoostRegressor, GradientBoostingRegressor, ExtraTreesRegressor, BaggingRegressor, KNeighborsRegressor, and SVR.
+
+- The current code is for the house price prediction of melb dataset --- from Kaggle.
 
 - Besides the prediction, this code can handle some simple data preprocess，such as Data Drop, Data Normalization, and Conversion from Text to Number.
 
