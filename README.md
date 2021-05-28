@@ -1,5 +1,5 @@
-可以处理简单的数据，需要部分手动操作。
+- The current code is for the house price prediction of merb dataset --- from Kaggle.
 
-目前的代码针对merb数据集---来自Kaggle。
+- Besides the prediction, this code can handle some simple data preprocess，such as Data Drop, Data Normalization, and Conversion from Text to Number.
 
-从sklearn安装了多种回归模型，目前效果最好的是极端随机树回归模型（ExtraTreesRegressor），预测房价的误差最少可以到14.5%。
+- A variety of regression models have been installed from sklearn. The best is the ExtraTreesRegressor. It's prediction error can reach to 14.5% (Pretty Bad).
