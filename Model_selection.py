@@ -1,15 +1,14 @@
-from sklearn.ensemble import RandomForestRegressor, AdaBoostRegressor, \
-    GradientBoostingRegressor, ExtraTreesRegressor, \
-    BaggingRegressor
+from sklearn.ensemble import RandomForestRegressor, AdaBoostRegressor, GradientBoostingRegressor, ExtraTreesRegressor, BaggingRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
 
-import matplotlib.pyplot as plt
-import numpy as np
 from time import *
 from sklearn.metrics import mean_absolute_error
 
 from Data_preprocessing.Data_split_API import data_split
+
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def random_forest_regress_model():
@@ -173,35 +172,35 @@ def k_neighbors_regress_model():
 
     return predict_data, real_data
 
-# # 支持向量机模型测试
-#
-# # 选择对应模型
-# start = time()
-#
-# # predict, real = random_forest_regress_model()
-# # predict, real = ada_boost_regress_model()
-# # predict, real = support_vector_machine_model()
-# # predict, real = gradient_boost_regress_model()
-# # predict, real = extra_trees_regress_model()
-# # predict, real = bagging_regress_model()
-# # predict, real = k_neighbors_regress_model()
-#
-# end = time()
-#
-# run_time = end - start
-# print('Running time is:', run_time)
-#
-# error = []
-# for i in range(len(predict)):
-#     error.append(np.abs((predict[i] - real[i]) / real[i]))
-#
-# print(np.mean(error))
-# print(mean_absolute_error(predict, real))
-#
-# # 画图对比预测值和实际值
-# plt.rcParams['figure.figsize'] = (100.0, 8.0)
-#
-# plt.plot(predict, color='black')
-# plt.plot(real, color='red')
-#
-# plt.show()
+# 支持向量机模型测试
+
+start = time()
+
+# 选择对应模型--必选
+# predict, real = random_forest_regress_model()
+# predict, real = ada_boost_regress_model()
+# predict, real = support_vector_machine_model()
+# predict, real = gradient_boost_regress_model()
+# predict, real = extra_trees_regress_model()
+# predict, real = bagging_regress_model()
+# predict, real = k_neighbors_regress_model()
+
+end = time()
+
+run_time = end - start
+print('Running time is:', run_time)
+
+error = []
+for i in range(len(predict)):
+    error.append(np.abs((predict[i] - real[i]) / real[i]))
+
+print(np.mean(error))
+print(mean_absolute_error(predict, real))
+
+# 画图对比预测值和实际值
+plt.rcParams['figure.figsize'] = (100.0, 8.0)
+
+plt.plot(predict, color='black')
+plt.plot(real, color='red')
+
+plt.show()
